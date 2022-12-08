@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+	background: #050f1c;
+	height: 100vh;
+	min-height: 700px;
+	min-width: 400px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.weatherapp {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.weatherapp * {
+	margin-bottom: 0.5em;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	max-width: max-content;
+	font-weight: 300;
+	color: rgba(255, 255, 255, 60%);
+	margin: 2px auto;
+}
+
+.header p {
+	margin-left: 10px;
+}
+
+.location h3 {
+	font-weight: 400;
+	font-size: 1.5rem;
+	letter-spacing: 0.08em;
+	margin-bottom: 0px;
+}
+
+.details {
+	display: flex;
+	width: 350px;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.item {
+	display: flex;
+	align-items: flex-end;
+}
+
+.weather h1 {
+	font-weight: 400;
+	font-size: 4rem;
+	position: relative;
+	margin: 25px 0;
+}
+
+.sup {
+	font-size: 2rem;
+	letter-spacing: 5px;
+}
+
+.item sup {
+	font-size: 0.6rem;
+}
+
+.item > p {
+	margin: 0px 10px;
+	color: rgba(255, 255, 255, 90%);
+}
+
+.icon {
+	transform: translateY(6.5px);
+	color: #7095bf;
+}
+
+.circle {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: linear-gradient(to right, #3ca4fc, #bd69fb);
+	margin: 20px 0;
+	box-shadow: 0 0 100px rgba(206, 232, 255, 40%);
+	position: relative;
+}
+
+.temp-icon {
+	font-size: 5rem;
+	position: absolute;
+	height: 5rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0.8;
+}
+
+.weather {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.weather h3 {
+	padding: 0.5em 1.5em;
+	border-radius: 50px;
+	width: max-content;
+	background: #58789b;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	font-size: 1rem;
+	text-transform: capitalize;
+	margin: 10px 0 0 0;
+}
+
+.temp_toggle {
+	padding: 0.5em 1.5em;
+	border: none;
+	border-radius: 5px;
+	font-size: 1rem;
+	cursor: pointer;
+	color: #1b2730;
+}
+
+.temp_toggle:hover {
+	background: #bd69fb;
+	color: white;
+	transition: all 0.2s linear;
+}
+
+@media (max-width: 600px) {
+	.weatherapp > * {
+		margin-bottom: 1.5em;
+	}
+}
